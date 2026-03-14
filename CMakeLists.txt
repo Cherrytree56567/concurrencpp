@@ -102,6 +102,7 @@ target_coroutine_options(concurrencpp)
 
 target_compile_definitions(concurrencpp
         PRIVATE $<$<STREQUAL:$<TARGET_PROPERTY:concurrencpp,TYPE>,SHARED_LIBRARY>:CRCPP_EXPORT_API>
+        NOMINMAX
         INTERFACE $<$<STREQUAL:$<TARGET_PROPERTY:concurrencpp,TYPE>,SHARED_LIBRARY>:CRCPP_IMPORT_API>
 )
 
